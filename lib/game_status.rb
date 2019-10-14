@@ -19,11 +19,6 @@ def won?(board)
   WIN_COMBINATIONS.detect do |combo|
     board[combo[0]] == board[combo[1]] &&
     board[combo[1]] == board[combo[2]] &&
-    board[combo[2]] == board[combo[3]] &&
-    board[combo[3]] == board[combo[4]] &&
-    board[combo[4]] == board[combo[5]] &&
-    board[combo[5]] == board[combo[6]] &&
-    board[combo[6]] == board[combo[7]] &&
     position_taken?(board, combo[0])
   end
 end
